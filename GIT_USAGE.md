@@ -164,7 +164,7 @@ GitHub에서
 ```
 
 GitHub에서 Pull Request를 생성합니다.
-
+<br>
 ```text
 작업 Branch
       ↓
@@ -237,7 +237,7 @@ git checkout develop
 ```bash
 git pull origin develop
 ```
-
+<br>
 사용이 끝난 로컬 브랜치를 삭제합니다.
 
 ```bash
@@ -298,7 +298,7 @@ refactor: 중복되는 유효성 검사 로직 하나의 메소드로 분리
 ```bash
 git branch
 ```
-
+<br>
 
 
 변경사항 확인
@@ -306,7 +306,7 @@ git branch
 ```bash
 git status
 ```
-
+<br>
 
 
 변경사항 임시저장
@@ -314,7 +314,7 @@ git status
 ```bash
 git stash
 ```
-
+<br>
 
 
 임시저장 목록 확인
@@ -334,7 +334,7 @@ git stash pop
 ```bash
 git stash apply stash@{숫자}
 ```
-
+<br>
 
 
 브랜치 이동
@@ -342,7 +342,7 @@ git stash apply stash@{숫자}
 ```bash
 git checkout develop
 ```
-
+<br>
 
 
 새로운 브랜치 생성
@@ -350,7 +350,7 @@ git checkout develop
 ```bash
 git checkout -b 브랜치명
 ```
-
+<br>
 
 
 다른 브랜치의 상태 가져오기
@@ -364,7 +364,7 @@ git pull 브랜치명
 ```bash
 git pull origin 브랜치명
 ```
-
+<br>
 
 
 변경사항 Stage 추가
@@ -372,7 +372,7 @@ git pull origin 브랜치명
 ```bash
 git add .
 ```
-
+<br>
 
 
 Commit
@@ -380,7 +380,7 @@ Commit
 ```bash
 git commit -m "커밋메시지"
 ```
-
+<br>
 
 
 최초 Push
@@ -396,7 +396,7 @@ git push -u origin 브랜치명
 ```bash
 git push origin 브랜치명
 ```
-
+<br>
 
 
 로컬 브랜치 삭제
