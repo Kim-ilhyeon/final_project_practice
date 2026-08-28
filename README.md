@@ -59,7 +59,7 @@ Git 연습과 함께 파이널 프로젝트에서 활용할 아래 두 가지 �
 
 ---
 
-# 📁 Repository 구조
+## 📁 Repository 구조
 
 각자 공부한 내용은 아래와 같은 구조로 작성합니다.
 
@@ -84,7 +84,7 @@ final-project-practice
 
 ---
 
-# ✏️ 작성 방법
+## ✏️ 작성 방법
 
 ## REST API
 
@@ -118,7 +118,7 @@ docs/exception/EXCEPTION_ilhyun.md
 
 ---
 
-# 🔄 진행 방법
+## 🔄 진행 방법
 
 각자의 문서는 **GitHub에서 직접 작성하지 않고 Local Repository에서 작성**합니다.
 
@@ -148,7 +148,7 @@ Merge
 
 ---
 
-# 💬 학습 내용 공유
+## 💬 학습 내용 공유
 
 각자가 같은 주제를 공부하더라도 이해한 내용이나 중요하게 생각한 부분은 다를 수 있습니다.
 
@@ -166,7 +166,7 @@ Pull Request가 올라오면 다른 팀원의 문서를 읽어보고
 
 ---
 
-# 🎯 Repository 목표
+## 🎯 Repository 목표
 
 이 Repository의 최종 목표는 크게 두 가지입니다.
 
