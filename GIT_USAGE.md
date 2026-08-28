@@ -6,7 +6,7 @@
 
 ---
 
-# 1. Repository Clone
+## 1. Repository Clone
 
 최초 1회 실행합니다.
 
@@ -22,7 +22,7 @@ cd Repository
 
 ---
 
-# 2. develop 브랜치 준비
+## 2. develop 브랜치 준비
 
 원격의 `develop` 브랜치를 로컬에 생성합니다.
 
@@ -38,7 +38,7 @@ git branch
 
 ---
 
-# 3. 작업 시작
+## 3. 작업 시작
 
 작업 전 반드시 `develop` 브랜치로 이동합니다.
 
@@ -70,7 +70,7 @@ git checkout -b feature/unlogin-contect
 
 ---
 
-# 4. 작업 후 Commit
+## 4. 작업 후 Commit
 
 변경사항 확인
 
@@ -100,7 +100,7 @@ git commit -m "docs: README.md 수정"
 
 ---
 
-# 5. 최신 원격의 develop 상태 반영
+## 5. 최신 원격의 develop 상태 반영
 
 Push 전에 최신 `develop` 내용을 가져옵니다.
 
@@ -117,7 +117,7 @@ git commit -m "merge: develop과 충돌 해결"
 
 ---
 
-# 6. Push
+## 6. Push
 
 최초 Push
 
@@ -145,7 +145,7 @@ git push origin docs/edit-README
 
 ---
 
-# 7. Pull Request
+## 7. Pull Request 생성
 
 GitHub에서
 
@@ -173,7 +173,7 @@ GitHub에서 Pull Request를 생성합니다.
 
 반드시 `base` 브랜치가 `develop`인지 확인합니다.
 
-## PR 제목
+### PR 제목
 
 ```text
 [Docs] REST API 학습 내용 작성
@@ -181,7 +181,7 @@ GitHub에서 Pull Request를 생성합니다.
 [Fix] 비로그인 접근 시 Interceptor 경로 추가
 ```
 
-## PR 내용
+### PR 내용
 
 ```markdown
 ## 작업 내용
@@ -202,7 +202,7 @@ GitHub에서 Pull Request를 생성합니다.
 
 ---
 
-# 8. Code Review
+## 8. Code Review
 
 다른 팀원의 PR을 확인하고 의견을 남깁니다.
 
@@ -226,7 +226,7 @@ Review 후 수정할 내용이 있다면 기존 브랜치에서 수정 후 다�
 
 ---
 
-# 9. Merge(병합) 후 정리
+## 9. Merge(병합) 후 정리
 
 PR이 `develop`에 Merge되면 로컬도 최신화합니다.
 
@@ -252,7 +252,7 @@ git branch -d feature/member-login
 
 ---
 
-# Commit Message 규칙
+## Commit Message 규칙
 
 형식
 
@@ -280,7 +280,7 @@ refactor: 중복되는 유효성 검사 로직 하나의 메소드로 분리
 
 ---
 
-# 기본 규칙
+## 기본 규칙
 
 - `main`, `develop`에서 직접 작업하지 않습니다.
 - 작업 시작 전 `develop`을 최신화합니다.
@@ -291,7 +291,7 @@ refactor: 중복되는 유효성 검사 로직 하나의 메소드로 분리
 
 ---
 
-# 자주 사용하는 Git 명령어
+## 자주 사용하는 Git 명령어
 
 현재 로컬의 브랜치 확인
 
