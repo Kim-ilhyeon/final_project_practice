@@ -2,6 +2,7 @@ package com.example.practice.member.controller;
 
 import com.example.practice.member.dto.MemberJoinRequest;
 import com.example.practice.member.service.MemberService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -67,7 +68,7 @@ public class MemberController {
     // 정보 입력 후 DB에 신규 회원 정보를 저장
     @PostMapping("/join")
     public String insertMember(
-            @ModelAttribute MemberJoinRequest memberJoinRequest
+            @Valid @ModelAttribute MemberJoinRequest memberJoinRequest
             ) {
         try {
             memberService.insertMember(memberJoinRequest);
