@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace : 해당 XML파일을 어떤 Mapper 인터페이스와 연결할지를 정해주는 속성.
+-->
+<mapper namespace="com.example.practice.member.mapper.MemberMapper">
+
+    <!--실제로 DB에 신규회원을 저장하는 SQL-->
+    <insert id="insertMember" parameterType="memberJoinRequest">
+        INSERT INTO member (email, password, name, age)
+            VALUES (#{email}, #{password}, #{name}, #{age})
+    </insert>
+
+</mapper>
