@@ -52,6 +52,19 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>3.0.3</version> <!-- 스프링 부트 버전에 맞게 조절 -->
 		</dependency>
+
+		<!-- Spring Security 의존성 추가  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!-- Spring Security 테스트를 위한 라이브러리 -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
