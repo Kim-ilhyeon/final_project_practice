@@ -1,1 +1,1 @@
-<footer class="footer">&copy; Simple Board</footer>
+<footer class="footer">&copy; Final Practice</footer>

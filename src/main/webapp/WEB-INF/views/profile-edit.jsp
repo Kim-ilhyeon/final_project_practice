@@ -1,5 +1,39 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="UTF-8"><title>정보 수정</title><link rel="stylesheet" href="css/style.css"></head>
-<body><%@ include file="common/header.jsp" %>
-<main class="container"><section class="card form-card"><h1 class="page-title">정보 수정</h1><form action="#" method="post"><div class="form-group"><label for="editId">아이디</label><input id="editId" value="honggildong" readonly></div><div class="form-group"><label for="editPassword">새 비밀번호</label><input id="editPassword" type="password"></div><div class="form-group"><label for="editName">이름</label><input id="editName" value="홍길동"></div><div class="form-group"><label for="editEmail">이메일</label><input id="editEmail" type="email" value="hong@example.com"></div><div class="button-row"><a class="button secondary" href="mypage.jsp">취소</a><button class="button" type="submit">수정하기</button></div></form></section></main><%@ include file="common/footer.jsp" %></body></html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정보 수정</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<%@ include file="common/header.jsp" %>
+<main class="container">
+    <section class="card form-card"><h1 class="page-title">정보 수정</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="editId">아이디</label>
+                <input id="editId" value="honggildong" readonly>
+            </div>
+            <div class="form-group">
+                <label for="editPassword">새 비밀번호</label>
+                <input id="editPassword" type="password">
+            </div>
+            <div class="form-group">
+                <label for="editName">이름</label>
+                <input id="editName" value="홍길동">
+            </div>
+            <div class="form-group">
+                <label for="editEmail">이메일</label>
+                <input id="editEmail" type="email" value="hong@example.com">
+            </div>
+            <div class="button-row">
+                <button class="button" type="submit">수정하기</button>
+                <a class="button secondary" href="mypage.jsp">취소</a>
+            </div>
+        </form>
+    </section>
+</main>
+<%@ include file="common/footer.jsp" %>
+</body>
+</html>
