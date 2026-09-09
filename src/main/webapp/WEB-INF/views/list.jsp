@@ -1,0 +1,53 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 목록</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<%@ include file="common/header.jsp" %>
+<main class="container"><h1 class="page-title">게시글 목록</h1>
+    <p class="page-description">전체 게시글을 확인할 수 있습니다.</p>
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th class="number">번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th class="date">작성일</th>
+                <th class="views">조회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="number">3</td>
+                <td><a class="post-title" href="detail.jsp">세 번째 게시글입니다.</a></td>
+                <td>홍길동</td>
+                <td class="date">2026-09-09</td>
+                <td class="views">12</td>
+            </tr>
+            <tr>
+                <td class="number">2</td>
+                <td><a class="post-title" href="detail.jsp">게시판 이용 안내</a></td>
+                <td>관리자</td>
+                <td class="date">2026-09-08</td>
+                <td class="views">25</td>
+            </tr>
+            <tr>
+                <td class="number">1</td>
+                <td><a class="post-title" href="detail.jsp">환영합니다.</a></td>
+                <td>관리자</td>
+                <td class="date">2026-09-07</td>
+                <td class="views">37</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-row"><a class="button" href="write.jsp">글쓰기</a></div>
+</main>
+<%@ include file="common/footer.jsp" %>
+</body>
+</html>
