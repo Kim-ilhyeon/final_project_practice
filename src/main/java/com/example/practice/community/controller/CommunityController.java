@@ -1,6 +1,6 @@
 package com.example.practice.community.controller;
 
-import com.example.practice.community.dto.BoardDto;
+import com.example.practice.community.dto.BoardRequestDto;
 import com.example.practice.community.service.BoardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CommunityController {
 
     private final BoardService boardService;
-
     public CommunityController(BoardService boardService) {
         this.boardService = boardService;
     }
@@ -37,8 +36,8 @@ public class CommunityController {
     }
 
     @PostMapping("/write")
-    public String write(BoardDto boardDto){
-        boardService.writeBoard(boardDto);
+    public String write(BoardRequestDto boardRequestDto){
+        boardService.writeBoard(boardRequestDto);
         return "redirect:/community/list";
     }
 

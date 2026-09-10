@@ -7,9 +7,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
 @ToString
-public class BoardDto {
+public class BoardResponseDto {
     private Long boardId;
     private Long memberId;
     private String title;
