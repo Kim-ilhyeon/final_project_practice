@@ -14,4 +14,16 @@ public class BoardServiceImpl implements BoardService {
     public void writeBoard(BoardDto boardDto) {
         boardMapper.insertBoard(boardDto);
     }
+
+    @Override
+    public void deleteBoard(Long boardId, Long memberId){
+        BoardDto boardDto = new BoardDto();
+        boardDto.setBoardId(boardId);
+        boardDto.setMemberId(memberId);
+        int result = boardMapper.deleteBoard(boardDto);
+
+        if(result != 1){
+            throw new IllegalStateException("삭제 실패");
+        }
+    }
 }

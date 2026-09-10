@@ -2,10 +2,15 @@ package com.example.practice.community.controller;
 
 import com.example.practice.community.dto.BoardDto;
 import com.example.practice.community.service.BoardService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.ui.Model;
+
 
 @Controller
 @RequestMapping("/community")
@@ -46,5 +51,22 @@ public class CommunityController {
     @GetMapping("/edit/{boardId}")
     public String communityEditPage(){
         return "community/edit";
+    }
+
+    @PostMapping("/{boardId}/delete")
+    public String deleteBoard(
+            @PathVariable Long boardId,
+            RedirectAttributes redirectAttributes,
+            Model model,
+            HttpSession session){
+        MemberDto loginMember = (MemberDto)session.getAttribute(SessionConst.LOGIN_USER);
+        try {
+            boardService.deleteBoard(boardId, loginMember.getMemberId());
+        } catch (IllegalStateException e) {
+            model.addAttribute("errMsg", e.getMessage());
+            return "common/error";
+        }
+        redirectAttributes.addFlashAttribute("successMsg", "삭제 완료");
+        return "redirect:/community/list";
     }
 }

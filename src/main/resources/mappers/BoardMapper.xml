@@ -12,6 +12,16 @@
         SELECT board_id, member_id, content, count, name, title, created_at,
             DATE_FORMAT(created_at, '%Y-%m-%d %H:%i') AS created_at_str
         FROM board
+    </select>
+
+
+    <update id="deleteBoard" parameterType="BoardDto">
+        UPDATE board
+        SET deleted_at = NOW()
+        WHERE board_id = #{boardId}
+            AND member_id = #{memberId}
+            AND deleted_at IS NULL
+    </update>
 
 
 
