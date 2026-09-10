@@ -80,12 +80,24 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- 인증 및 인가 등 보안 기능을 사용하기 위한 라이브러리 -->
+		<!-- Spring Security 의존성 추가  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+		<!-- Spring Security 테스트를 위한 라이브러리 -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Validation 의존성 추가 (유효성, 정규식 검사) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 		<!-- MySQL -->
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -98,8 +110,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
-
-
 
 	</dependencies>
 
