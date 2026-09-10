@@ -52,6 +52,13 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>3.0.3</version> <!-- 스프링 부트 버전에 맞게 조절 -->
 		</dependency>
+
+		<!--  MySQL  -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
