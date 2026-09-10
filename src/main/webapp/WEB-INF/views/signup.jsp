@@ -1,0 +1,39 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<%@ include file="common/header.jsp" %>
+<main class="container">
+    <section class="card form-card"><h1 class="page-title">회원가입</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="userId">아이디</label>
+                <input id="userId" name="userId" type="text">
+            </div>
+            <div class="form-group">
+                <label for="userPassword">비밀번호</label>
+                <input id="userPassword" name="userPassword" type="password">
+            </div>
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div class="form-group">
+                <label for="age">나이</label>
+                <input id="age" name="age" type="text">
+            </div>
+            <div class="button-row">
+                <button class="button" type="submit">가입하기</button>
+                <a class="button secondary" href="main.jsp">취소</a>
+            </div>
+        </form>
+    </section>
+</main>
+<%@ include file="common/footer.jsp" %>
+</body>
+</html>
