@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.practice.community.mapper.BoardMapper">
+    <insert id="insertBoard">
+        INSERT INTO board(member_id, title, content, category_id, count)
+        VALUES (#{memberId}, #{title}, #{content}, #{categoryId}, 0)
+    </insert>
+
+    <select id="selectBoardById" parameterType="Long" resultType="PostDto">
+        SELECT board_id, member_id, content, count, name, title, created_at,
+            DATE_FORMAT(created_at, '%Y-%m-%d %H:%i') AS created_at_str
+        FROM board
+    </select>
+
+
+    <update id="deleteBoard" parameterType="BoardDto">
+        UPDATE board
+        SET deleted_at = NOW()
+        WHERE board_id = #{boardId}
+            AND member_id = #{memberId}
+            AND deleted_at IS NULL
+    </update>
+
+
+
+
+</mapper>
