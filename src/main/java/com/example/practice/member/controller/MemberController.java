@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
-    @Autowired
     private MemberService memberService;
+
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     // 로그인 페이지로 이동하는 경로
     @GetMapping("/login")

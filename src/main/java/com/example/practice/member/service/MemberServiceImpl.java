@@ -9,11 +9,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberServiceImpl implements MemberService {
 
-    @Autowired
-    private MemberMapper memberMapper;
+    private final MemberMapper memberMapper;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
+
+    public MemberServiceImpl(MemberMapper memberMapper, PasswordEncoder passwordEncoder) {
+        this.memberMapper = memberMapper;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     /**
      * 신규 회원을 DB에 등록 (회원가입)
