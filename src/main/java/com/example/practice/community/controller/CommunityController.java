@@ -59,7 +59,8 @@ public class CommunityController {
             RedirectAttributes redirectAttributes,
             Model model,
             HttpSession session){
-        MemberDto loginMember = (MemberDto)session.getAttribute(SessionConst.LOGIN_USER);
+        //MemberDto loginMember = (MemberDto)session.getAttribute(SessionConst.LOGIN_USER);
+        // TODO: SessionConst 정의 멤버 족에서 쓰면 쓸 예정.......
         try {
             boardService.deleteBoard(boardId, loginMember.getMemberId());
         } catch (IllegalStateException e) {
